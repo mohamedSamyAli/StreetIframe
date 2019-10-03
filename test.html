@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="Load()">LOAD DATA</button>
+<iframe width="100%" height="1000px" src="http://192.168.4.18:3000/" style="height:100vh"></iframe>
+<script>
+    var data = JSON.parse('{"FREEHAND_POLYGON":[],"Shape":[{"rings":[[[5587427.934831439,3027542.549115836],[5587389.289300695,3027145.0522281886],[5587389.289300695,3027145.0522281886],[5587383.768510588,3027122.9690677635],[5587372.726930376,3027089.8443271266],[5587356.164560058,3027051.198796383],[5587342.362584792,3027029.115635958],[5587295.435868889,3026998.751290374],[5587207.10322719,3026960.1057596304],[5587096.687425066,3026907.6582536213],[5586983.511227888,3026885.5750931962],[5586856.533055445,3026910.4186486746],[5586751.638043427,3026960.1057596304],[5586671.586586887,3026993.230500268],[5586597.055920453,3027109.1670924984],[5586632.9410561435,3027341.0402769595],[5586837.210290073,3027564.632276261],[5587386.528905642,3027570.1530663674],[5587427.934831439,3027542.549115836]]],"_ring":0,"spatialReference":{"wkid":102100,"latestWkid":3857}}],"POINT":[],"MunicipalityName":"الخبر","Municipality":10506,"District":175,"Districtname":"التعاون","streetId":139676,"streetname":"السخاد"}')
+  
+  console.log(data)
+  iframe = document.querySelector("iframe")
+function Load(){
+    iframe.contentWindow.postMessage(data, '*');
+}
+    window.addEventListener("message", receiveMessage, false);
+
+function receiveMessage(event) {
+  console.log(event)
+
+}
+       </script>
+</body>
+</html>

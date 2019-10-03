@@ -1,0 +1,135 @@
+.App {
+  text-align: center;
+ 
+}
+@font-face {
+  font-family: 'Droid Arabic Kufi';
+  src: url('./vendor/fonts/DroidKufi-Regular.ttf');
+}
+body{
+  font-family: 'Droid Arabic Kufi'!important;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+.MapSelect{
+  display: flex;
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.mapSam{
+  background: currentColor;
+    /* width: 16vw;
+    display: grid; */
+    grid-template-rows: repeat(6,11vh);
+    /* padding-top: 10px; */
+    overflow: hidden;
+}
+.buttonSam{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  margin: 10px
+}
+.ant-select-selection__placeholder, .ant-select-search__field__placeholder{
+  text-align: right!important
+}
+.ant-select-arrow{
+  left: 11px!important;
+  right: auto!important
+}
+.ant-select-dropdown-menu-item{
+  text-align: right!important
+}
+.ant-select-selection-selected-value{
+  float: right!important;
+}
+.label_cust{
+  color: rgb(255, 255, 255);
+    text-align: right;
+    margin: 10px;
+}
+.table{
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+  border-spacing: 0;
+   color: #fff;
+    text-align: right;
+    margin: 15px;
+    line-height: 4;
+    display: table;
+    /* display: grid; */
+    grid-template-columns:1fr 1fr; 
+    /* direction: rtl */
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  /* border-top: 1px solid #ddd */
+}
+tr:nth-child(even) {
+  background: #4b4e50;
+}
+.layout-res{
+  display: grid;
+  grid-template-columns: 85% 15%;
+  overflow-x:auto 
+}
+
+@media screen and (max-width: 767px) {
+  .layout-res{
+    
+    grid-template-columns: 65% 35%;
+    overflow-x:auto 
+  }
+}
+@media screen and (min-width: 786px) and (max-width: 959px) {
+  .layout-res{
+    
+    grid-template-columns: 70% 30%;
+    overflow-x:auto 
+  }
+}
+@media screen and (min-width: 960px) and (max-width: 1023px)  {
+
+  .layout-res{
+    
+    grid-template-columns: 80% 20%;
+    overflow-x:auto 
+  }
+}
+@media screen and (min-width: 1024px)and (max-width: 1200px) {
+
+  .layout-res{
+    
+    grid-template-columns: 80% 20%;
+    overflow-x:auto 
+  }
+}
